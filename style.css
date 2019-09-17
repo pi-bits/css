@@ -1,0 +1,218 @@
+                        p {
+                            border: 1px solid blue;
+                        }
+
+                        /* The red paragraph has moved 20px from the left and 10px from the top, 
+relative to its natural position, where it’s supposed to be. 
+
+ All the other elements don’t know that element has moved.
+
+*/
+
+                        .second {
+                            position: relative;
+                            border-color: red;
+                            left: 20px;
+                            top: 10px;
+                        }
+
+                        /*
+
+When the position is set to absolute, an element can move according to the first positioned ancestor.
+
+A positioned element is one whose position value is either relative, absolute or fixed. 
+So unless the position is not set or static, an element is positioned.
+The characteristic of a positioned element is that it can act as a reference point for its child elements.
+*/
+
+                        section {
+                            /* This turns the <section> into a point of reference for the <p> */
+                            position: relative;
+                            background: gold;
+                            height: 200px;
+                            padding: 10px;
+                        }
+
+                        p.abs {
+                            /* This makes the <p> freely movable */
+                            position: absolute;
+                            bottom: 100px;
+                            /* 10px from the bottom */
+                            left: 10px;
+                            /* 20px from the left */
+                            background: lime;
+                            padding: 10px;
+                            color: white;
+                        }
+
+                        /*
+     If the width is not set, 
+     applying left: 0 and right: 0 will stretch the element across the whole width.
+      It’s the equivalent of setting left: 0 and width: 100%.
+If the width is set, 
+then the right value is discarded.*/
+
+                        p.abs_full_width {
+                            /* This makes the <p> freely movable */
+                            position: absolute;
+                            bottom: 10px;
+                            /* 10px from the bottom */
+                            left: 0px;
+                            /* 20px from the left */
+                            right: 0px;
+                            /* 20px from the left */
+                            background: lime;
+                            padding: 10px;
+                            color: white;
+                        }
+
+                        /*
+The purpose of floating an element is to push it to one side and make the text wrap around it.
+*/
+
+                        p.floating {
+                            background: yellow;
+                            border: 0px;
+                            padding: 10px;
+                            height: 200px;
+                        }
+
+                        /*
+float: left takes the image out of the flow, the yellow paragraph’s height is only 
+the height of its text. In other words, the height of the image isn’t taken into account.
+*/
+
+                        img.floating {
+                            float: left;
+                        }
+
+                        /*
+The clear property allows to push elements after the float. It can only be applied on block elements.
+
+Instead of having the text pushed next to the image, the clear: left pushes the text below the image.
+*/
+
+                        span {
+                            clear: left;
+                            display: block;
+                        }
+
+                        .blockquote {
+                            border-color: solid-blue;
+                            border-style: double;
+                            background-color: bisque;
+                            border-width: 10px;
+                            border-bottom-style: solid;
+                            border-bottom-width: 1px;
+                            padding: 20px;
+                        }
+
+                        /*
+To give space to your inner content - Padding :The padding is the space between an element’s border and its content.
+To push away your neighbours - Margin - If padding adds space inside an element (between its border and its content), margins adds space outside between an element and other elements.
+*/
+
+                        a {
+                            color: blue;
+                        }
+
+                        a:hover {
+                            color: red;
+                        }
+
+                        a:visited {
+                            color: rebeccapurple;
+                        }
+
+                        div.hover_test {
+                            background-color: bisque;
+                        }
+
+                        div.hover_test:hover {
+                            background-color: red;
+                        }
+
+                        form {
+                            position: relative;
+                            left: 350px;
+                            width: 200px;
+                            top: 10px;
+                            bottom: 10px;
+                            margin: 10px;
+                            padding: 20px;
+                            background-color: bisque;
+                            border: 1px;
+                            border-style: solid;
+                            border-color: blue;
+                        }
+
+                        form.form-input {
+                            margin: 5px;
+                            border: 2px solid blue;
+                            padding: 5px;
+                        }
+
+                        form.form-label {
+                            margin: 5px;
+                            padding: 5px;
+                        }
+
+                        .form-input:focus {
+                            background: lightyellow;
+                            border-color: red;
+                            outline: none;
+                        }
+
+                        /* li:first-child {
+                            background-color: green;
+                        }
+
+                        li:last-child {
+                            background-color: yellow;
+                        }
+
+                        li:nth-child(2) {
+                            background: violet;
+                        } */
+                        li:nth-child(odd){ background: gold;}
+                        li:nth-child(even){ background: green;}
+
+
+                        div.list {
+                            margin: 20px;
+                            margin-left: 50px;
+                            width: 200px;
+                        }
+
+                        div.lg{
+                            background-image: linear-gradient(to bottom right, yellow, purple);
+                            width:200px;
+                            height: 100px;   
+                        }
+
+
+
+                        #input_container {
+                            position:relative;
+                            padding:0 0 0 20px;
+                            margin:0 20px;
+                            background:#ddd;
+                            direction: rtl;
+                            width: 200px;
+                        }
+                        #input {
+                            height:20px;
+                            margin:0;
+                            padding-right: 30px;
+                            width: 100%;
+                        }
+                        #input_img {
+                            position:absolute;
+                            bottom:2px;
+                            right:5px;
+                            width:24px;
+                            height:24px;
+                        }
+
+
+                        
